@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to Recipe Submission
+  p Please add a recipe here
+
+form(name="addRecipe", action="/submitRecipe", method="post")
+      input(type="text", name="Recipe Title")
+      input(type="text", name="Description")
+      input(type="submit", value="Upload")
